@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    background: url(download.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {    
+    position: fixed;
+    background-image: linear-gradient(to right, red , yellow);
+    top: 0; right: 0; left: 0;
+    box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1);
+    padding:0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    z-index: 1000;
+   
+}
+
+.logo img {
+    width: 120px;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+
+
+header .navbar ul  {
+    list-style: none; 
+}
+
+header .navbar ul li {
+    position: relative;
+    margin: 3px 5px 3px 5px;
+    float:left;
+    padding:0;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 11px;
+    color: rgb(7, 7, 7);
+    margin:0;
+    color: #040000;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: #333;
+    color: #fff;
+    margin:0;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left:0;
+    width:200px;
+    background: #fff;
+    display: none;
+    margin: 0;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(0,0,0,.1);
+    margin: 0;
+}
+
+header .navbar ul li ul li ul {
+    left:200px;
+    top:0;
+    margin: 0;
+    color: #c83939;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: initial;
+    margin:0;
+}
+
+#menu-bar{
+    display: none;
+    margin: 0;
+}
+
+header label {
+    font-size: 20px;
+    color:#333;
+    cursor: pointer;
+    display: none;
+
+}
+
+.footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px) {
+
+    header{
+        padding:20px;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top:100%;left:0;right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,.1 );
+        display: none;  
+    }
+
+    header .nav ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100px;
+    }
+
+    header .navbar ul li ul li{
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul{
+        width:100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
